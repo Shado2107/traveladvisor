@@ -8,11 +8,11 @@ import useStyles from './styles';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const List = ({places, childClicked, isLoading}) => {
-    const classes =  useStyles('restaurants');
+const List = ({places, childClicked, isLoading, type, setType, rating, setRating}) => {
+    const classes =  useStyles();
 
-    const [type, setType] =  useState('');
-    const [rating, setRating] = useState('');
+    // const [type, setType] =  useState('restaurants');
+    // const [rating, setRating] = useState('');
 
     const [elRefs, setElRefs] = useState([]);
 

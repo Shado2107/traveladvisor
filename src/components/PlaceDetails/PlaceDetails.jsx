@@ -14,9 +14,9 @@ const PlaceDetails = ({place, selected, refProp}) => {
         if(selected) refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start"})
 
     return (
-       <Card elevation={6} >
+       <Card style={{ width: 350  }} elevation={6} >
            <CardMedia 
-                style={{ height: 350 }}
+                style={{ height: 250 }}
                 image= {place.photo ? place.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'}
                 title={place.name}
            />
@@ -69,7 +69,7 @@ const PlaceDetails = ({place, selected, refProp}) => {
                 <Button size="small" color="primary" onClick={() => window.open(place.website, '_blank')}>
                 Website
                 </Button>
-      </CardActions>
+            </CardActions>
 
        </Card>
     );
